@@ -9,7 +9,8 @@ int main() {
     scanf("%d %d", &num1, &num2);
     
     sum = add(num1, num2);
-    
+    //multiply
+    mult= num1 * num2;
     printf("Sum: %d\n", sum);
     return 0;
 }
