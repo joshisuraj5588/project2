@@ -2,9 +2,12 @@
 #include<string.h>
 int main()
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
     char a[100],b[20],c,d[]="loves",e[20];
 =======
+=======
+>>>>>>> 6a4f35c91d7eb94132e96b2af6f1c11db22d51e4
  {
     char a[40],b[20],c,d[]="loves",e[20];
 >>>>>>> a4ab0ed (changes)
