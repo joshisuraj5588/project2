@@ -10,13 +10,13 @@
       padding: 0;
       height: 100vh;
       background: linear-gradient(to top, #ffecd2 0%, #fcb69f 100%);
-      background-size: cover;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       overflow: hidden;
+      position: relative;
     }
 
     .sun {
@@ -26,7 +26,10 @@
       border-radius: 50%;
       position: absolute;
       top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
       animation: glow 2s ease-in-out infinite alternate;
+      z-index: 0;
     }
 
     @keyframes glow {
@@ -38,7 +41,7 @@
       color: white;
       font-size: 3em;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-      z-index: 1;
+      z-index: 2;
     }
 
     .landscape {
@@ -49,12 +52,72 @@
       background: linear-gradient(to top, #3f873f 0%, #76b852 100%);
       border-top-left-radius: 50% 20%;
       border-top-right-radius: 50% 20%;
+      z-index: 1;
+    }
+
+    .house {
+      position: absolute;
+      bottom: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 220px;
+      height: 150px;
+      background: #fff8dc;
+      border: 2px solid #8b5e3c;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    .roof {
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 110px solid transparent;
+      border-right: 110px solid transparent;
+      border-bottom: 60px solid #8b0000;
+    }
+
+    .door {
+      position: absolute;
+      bottom: 0;
+      left: 90px;
+      width: 40px;
+      height: 70px;
+      background: #654321;
+      border: 2px solid #3e2723;
+    }
+
+    .window {
+      position: absolute;
+      top: 30px;
+      width: 40px;
+      height: 40px;
+      background: #87ceeb;
+      border: 2px solid #3e2723;
+    }
+
+    .window.left {
+      left: 20px;
+    }
+
+    .window.right {
+      right: 20px;
     }
   </style>
 </head>
 <body>
   <div class="sun"></div>
   <h1>Good Morning!</h1>
+
+  <div class="house">
+    <div class="roof"></div>
+    <div class="door"></div>
+    <div class="window left"></div>
+    <div class="window right"></div>
+  </div>
+
   <div class="landscape"></div>
 </body>
 </html>
